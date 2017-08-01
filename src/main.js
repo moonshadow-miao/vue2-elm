@@ -18,16 +18,16 @@ const router = new VueRouter({
 	mode: routerMode,
 	strict: process.env.NODE_ENV !== 'production',
 	scrollBehavior (to, from, savedPosition) {
-	    if (savedPosition) {
-		    return savedPosition
+	    if (savedPosition) {  // savedPosition 当且仅当 popstate 导航 (通过浏览器的 前进/后退 按钮触发) 时才可用。
+        return savedPosition
 		} else {
-			if (from.meta.keepAlive) {
-				from.meta.savedPosition = document.body.scrollTop;
-			}
+        if (from.meta.keepAlive) {
+          from.meta.savedPosition = document.body.scrollTop;
+        }
 		    return { x: 0, y: to.meta.savedPosition ||0}
 		}
 	}
-})
+});
 
 new Vue({
 	router,
