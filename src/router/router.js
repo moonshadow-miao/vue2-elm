@@ -61,7 +61,9 @@ export default [{
         //首页城市列表页
         {
             path: '/home',
-            component: home
+            component: home,
+            // 为了缓存当前页面,记住上次滚动的位置
+            meta: { keepAlive: true },
         },
         //当前选择城市页
         {
