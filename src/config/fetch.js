@@ -37,7 +37,7 @@ export default async(url = '', data = {}, type = 'GET', method = 'fetch') => {
 
 		try {
 			const response = await fetch(url, requestConfig);
-			const responseJson = await response.json();
+			const responseJson = await response.json();  // json 是fetch原型上的函数,返回一个promiss对象
 			return responseJson
 		} catch (error) {
 			throw new Error(error)

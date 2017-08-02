@@ -131,7 +131,7 @@ export default {
 	[GET_USERINFO](state, info) {
 		if (state.userInfo && (state.userInfo.username !== info.username)) {
 			return;
-		};
+		}
 		if (!state.login) {
 			return
 		}
@@ -168,7 +168,7 @@ export default {
 	//保存geohash
 	[SAVE_GEOHASH](state, geohash) {
 		state.geohash = geohash;
-		
+
 	},
 	//确认订单页添加新的的地址
 	[CONFIRM_ADDRESS](state, newAddress) {

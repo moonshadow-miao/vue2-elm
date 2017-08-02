@@ -80,7 +80,6 @@ export default {
     },
 
     beforeRouteEnter(to, from, next){
-      // 获取当前城市
       cityGuess().then(res => {
         next(vm => {
           vm.guessCity = res.name;
