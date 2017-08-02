@@ -44,9 +44,7 @@
         mounted(){
             this.cityid = this.$route.params.cityid;
             //获取当前城市名字
-            currentcity(this.cityid).then(res => {
-                this.cityname = res.name;
-            })
+            this.cityname = this.$route.query.cityname;
             this.initData();
         },
 
