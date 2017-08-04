@@ -16,7 +16,7 @@ export const loadMore = {
 				let heightEl;
 				let scrollType = el.attributes.type && el.attributes.type.value;
 				let scrollReduce = 2;
-				if (scrollType == 2) {
+				if (scrollType === 2) {
 					scrollEl = el;
 					heightEl = el.children[0];
 				} else {
@@ -26,9 +26,9 @@ export const loadMore = {
 
 				el.addEventListener('touchstart', () => {
 					height = heightEl.clientHeight;
-					if (scrollType == 2) {
-						height = height
-					}
+					// if (scrollType === 2) {
+					// 	height = height
+					// }
 					setTop = el.offsetTop;
 					paddingBottom = getStyle(el, 'paddingBottom');
 					marginBottom = getStyle(el, 'marginBottom');
